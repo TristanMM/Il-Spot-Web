@@ -1,0 +1,119 @@
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+font-family: 'Roboto', sans-serif;
+margin: 0;
+}
+
+h1{
+    font-size: 3.5em;
+}
+
+h2{
+    font-size: 2.7em;
+}
+
+h3{
+    font-size: 2em;
+}
+
+p{
+    font-size: 1.25em;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+    background-color: aliceblue ;
+}
+
+header .logo{
+margin: 0;
+padding: 25px 30px;
+font-weight: bold;
+color: crimson;
+font-size: 1.6em;
+}
+
+header .container{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: crimson;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+}
+
+
+#Menu .container{
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#Menu{
+    background-color: rgb(30,30,39);
+    color: white;
+    padding: 100px 0px;
+}
+
+#Ubicacion{
+    background-color: rgb(30,30,39);
+    color: white;
+    padding: 100px 0px;
+}
+
+#Detalles{
+    padding: 100px 0px;
+}
+
+#Detalles .container{
+text-align: center;
+padding: 100px 0px;
+}
+
+#Ubicacion{
+    text-align:left;
+    padding: 100px 0px;
+}
+
+#Ubicacion a{
+    text-decoration: none;
+    color: white;
+}
+
+#Ubicacion a:hover{
+    color: crimson;
+}
