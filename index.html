@@ -6,39 +6,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I'L Spot Pizzero</title>
     <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+    
     <header>
         <div class="container">
-            <p class="logo">I'L Spot Pizzero</p>
+            <img src="media/ILSPOT_PNG_NEGRO.png" alt="logo del restaurante" width="200" height="90">
             <nav>
-                <a href="#Menu">Menu</a>
-                <a href="#Detalles">Detalles</a>
-                <a href="#Ubicacion">Ubicacion y contacto</a>
+                <a href="#Menu" class="scroll-link">Menu</a>
+                <a href="#HorarioDetalles" class="scroll-link">Horario y detalles</a>
+                <a href="#Ubicacion" class="scroll-link">Ubicacion y contacto</a>
             </nav>
         </div>
     </header>
-    <section id="hero">
-        <h1>I'L Spot Pizzero <br><br>"Aqui van imagenes"</h1>
+    
 
+    <section id="hero">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/iL Spot - Portada Borr.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen1.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen2.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen4.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen5.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen6.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen7.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen8.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen9.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen10.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen11.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen12.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen13.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen14.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen15.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen16.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen17.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen18.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen19.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen20.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen21.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen22.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen23.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen24.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen25.jpeg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="media/imagenes_ilustrativas/imagen26.jpeg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
     </section>
+    
+
 
     <section id="Menu">
         <div class="container">
-            <div class="img-container"></div>
-            <h2>Menu</h2>
-            <p>"Contenido del menu"</p>
+            <h2>Menú</h2>
+            <p>Descubre nuestro menú a continuación:</p>
+            <iframe src="media/MENU REST IL SPOT (3).pdf" width="100%" height="600px" style="border: none;"></iframe>
+            <p>
+                Si prefieres, <a href="media/MENU REST IL SPOT (3).pdf" target="_blank">haz clic aquí para descargar el menú</a>.
+            </p>
         </div>
     </section>
 
-    <section id="Detalles">
+    <section id="HorarioDetalles">
         <div class="container">
-            <div class="img-container"></div>
-            <h2>Detalles</h2>
-            <p>TIPOS DE COCINA <BR>COMIDAS</BR>VENTAJAS</p>
+            <h2>Horario y detalles</h2>
+            <div class="flex-container">
+                <!-- Horario -->
+                <div class="horario">
+                    <h3>Horario</h3>
+                    <ul>
+                        <li><strong>Lunes:</strong> 11:00 - 23:00</li>
+                        <br>
+                        <li><strong>Martes:</strong> 11:00 - 23:00</li>
+                        <br>
+                        <li><strong>Miércoles:</strong> 11:00 - 23:00</li>
+                        <br>
+                        <li><strong>Jueves:</strong> 11:00 - 23:00</li>
+                        <br>
+                        <li><strong>Viernes:</strong> 11:00 - 23:00</li>
+                        <br>
+                        <li><strong>Sábado:</strong> 11:00 - 23:00</li>
+                        <br>
+                        <li><strong>Domingo:</strong> 11:00 - 23:00</li>
+                    </ul>
+                    <br><br>
+                    <div id="status"></div>
+                </div>
+                <!-- Detalles -->
+                <div class="details-card">
+                    <h3>Detalles</h3>
+                    <p><strong>I'L Spot Pizzero</strong>, un restaurante especializado en pastas y cortes de carne de la más alta calidad.</p>
+                    <p><strong>Tipos de Cocina:</strong></p>
+                    <ul>
+                        <li>Estamos especializados en pastas desde Alfredo hasta la boloñesa con diferentes aditamentos.</li>
+                        <li>Cortes de carne acompañados de papa y ensalada.</li>
+                        <li>Carnes</li>
+                        <li>Pizza</li>
+                        <li>Mariscos</li>
+                        <li>Tablas</li>
+                        <li>Menú Ejecutivo</li>
+                    </ul>
+                    <p><strong>Ventajas:</strong></p>
+                    <ul>
+                        <li>Poseemos una piscina de 13 metros de largo y con una profundidad de 3 metros.</li>
+                        <li>Eventos: Organizamos noches de karaoke, música en vivo o DJ invitados una vez por semana.</li>
+                        <li>Organización: Ayudamos a planificar eventos especiales como fiestas de cumpleaños, graduaciones u otras ocasiones especiales.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+        <br><br><br>
     </section>
+    
 
     <section id="Ubicacion">
         <div class="container">
@@ -51,23 +184,19 @@
                     </a>
                 </p>
 
-                <P>
+                <p>
                     <img src="media/email.png" alt="Email del restaurante" width="25" height="20">
-                        email@gmail.com
+                    info@deymsa.com
+                </p>
 
-                </P>
-
-                <P>
+                <p>
                     <img src="media/telefono.png" alt="telefono del restaurante" width="25" height="20">
-                        +506 0000-0000
-
-                </P>
+                    +506 7152-8989
+                </p>
             </div>
         </div>
     </section>
-    
 
-    
 </body>
 
 </html>
