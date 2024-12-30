@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -7,7 +7,7 @@ html{
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
 }
 
@@ -16,7 +16,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.7em;
+    font-size: 2.1em;
 }
 
 h3 {
@@ -24,53 +24,85 @@ h3 {
 }
 
 p {
-    font-size: 1.25em;
+    font-size: 17px;
 }
 
+/* Contenedor principal */
 .container {
     max-width: 1400px;
     margin: auto;
-    padding: 0 20px; /* Agrega padding para evitar que el contenido toque los bordes en dispositivos móviles */
+    padding: 0 20px;
 }
 
+/* Estilo del header */
 header {
-    background-color: aliceblue;
-    padding: 10px 0; /* Ajusta el padding para dispositivos móviles */
+    position: absolute; /* Cambiar de 'fixed' a 'absolute' */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+/* Estilos para el contenedor dentro del header */
+header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo de la barra de navegación */
+header nav {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+/* Estilo de los enlaces dentro del header */
+header a {
+    font-size: 1.2em;
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Color dorado cuando el enlace está en hover */
+header a:hover {
+    color: goldenrod;
+}
+
+/* Estilo para el logo en el header */
 header .logo {
     margin: 0;
     padding: 25px 30px;
     font-weight: bold;
-    color: crimson;
+    color: goldenrod;
     font-size: 1.6em;
 }
 
-header .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 25px;
-}
-
-header a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-header a:hover {
-    color: crimson;
-}
-
+/* Estilo para el héroe (imagen de fondo) */
 #hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#Imagenes_lugar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#Imagenes_comida {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +119,10 @@ header a:hover {
     background-color: rgb(30, 30, 39);
     color: white;
     padding: 10px 0px;
+}
+
+#Menu h2 {
+    color: goldenrod;
 }
 
 #Ubicacion {
@@ -106,150 +142,146 @@ header a:hover {
 
 #Ubicacion {
     text-align: left;
-    padding: 100px 0px;
+    padding: 50px 0;
 }
 
-#Ubicacion a {
-    text-decoration: none;
-    color: white;
-}
-
-#Ubicacion a:hover {
-    color: crimson;
-}
-
-.horario ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.horario li {
-    font-size: 1.2em;
-    line-height: 1.8em;
-}
-
-.horario strong {
-    color: #000;
-    font-weight: bold;
-}
-
-.horario {
+#Ubicacion .column {
     flex: 1;
-    min-width: 300px;
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
-#status {
-    font-size: 1.25em;
-    color: green;
-    font-weight: bold;
-    margin-top: 10px;
+#Ubicacion .info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#Ubicacion h2 {
+    font-size: 2em;
+    color: goldenrod;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: goldenrod;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: darkorange;
+}
+
+/* Estilo de las imágenes de los lugares y comida */
+#Imagenes .column {
+    flex: 1;
+    padding: 20px;
+}
+
+#Imagenes .slideshow-container1,
+#Imagenes .slideshow-container2,
+#Imagenes .slideshow-container3 {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+#Imagenes .mySlides1,
+#Imagenes .mySlides2,
+#Imagenes .mySlides3 {
+    display: none;
+}
+
+#Imagenes img {
+    width: 100%;
+}
+
+#Menu iframe {
+    border: none;
 }
 
 .flex-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
 }
 
-.details-card {
-    flex: 1;
-    min-width: 300px;
-    background-color: #f8f8f8;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+.details-card,
+.horario {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 48%;
 }
 
-/* Contenedor del slideshow */
-.slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* La altura ocupará toda la pantalla */
-    margin: auto;
+.details-card h3,
+.horario h3 {
+    color: goldenrod;
 }
 
-/* Ocultar las imágenes por defecto */
-.mySlides {
-    display: none;
+.details-card ul,
+.horario ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Tamaño consistente para todas las imágenes */
-.mySlides img {
-    width: 100%;
-    height: 100vh; /* Ocupa toda la altura del viewport */
-    object-fit: contain; /* Mantiene la proporción y asegura que no se recorten */
+.details-card li,
+.horario li {
+    font-size: 1.1em;
 }
 
-/* Botones de siguiente y anterior */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color:gray;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    z-index: 1; /* Asegura que las flechas estén por encima de las imágenes */
+/* Estilo para las tarjetas de detalles */
+.details-card p,
+.horario p {
+    margin: 10px 0;
 }
 
-/* Botón de anterior (pegado a la izquierda) */ 
-.prev { left: 0; border-radius: 3px 0 0 3px; }
-
-/* Posicionamiento del botón siguiente */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+/* Estilo de las imágenes de local y comida en las secciones */
+#Imagenes_lugar {
+    display: flex;
+    justify-content: center;
 }
 
-/* Cambio de color al pasar el cursor */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+#Imagenes_comida {
+    display: flex;
+    justify-content: center;
 }
 
-/* Animación de desvanecimiento */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+/* Flexbox para las imágenes */
+.column {
+    width: 48%;
 }
 
-@-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+#Menu {
+    background-color: rgb(30, 30, 39);
+    color: white;
 }
 
-@keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
+#Menu iframe {
+    border: none;
 }
 
-/* Media queries para dispositivos móviles */
+/* Ajustes para móviles */
 @media (max-width: 768px) {
     header .container {
-        flex-direction: column;
-    }
-    
-    header nav {
         flex-direction: column;
         text-align: center;
     }
 
-    #hero {
+    header nav {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    #Ubicacion .column {
+        padding: 10px;
     }
 
     .flex-container {
@@ -257,25 +289,17 @@ header a:hover {
         align-items: center;
     }
 
-    .details-card, .horario {
-        min-width: 100%;
-        margin-bottom: 20px;
-    }
-    
-    .container {
-        padding: 0 10px; /* Aumenta el padding para dispositivos móviles */
+    #Menu iframe {
+        width: 90%;
+        height: 400px;
     }
 
-    h1 {
-        font-size: 2.5em;
+    #Imagenes .column {
+        width: 100%;
     }
-    h2 {
-        font-size: 2em;
-    }
-    h3 {
-        font-size: 1.5em;
-    }
-    p {
-        font-size: 1em;
+
+    #scrollToTopBtn {
+        right: 10px;
+        bottom: 10px;
     }
 }

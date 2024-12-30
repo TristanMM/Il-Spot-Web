@@ -57,21 +57,90 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-let slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex1 = 1;
+let slideIndex2 = 1;
+let slideIndex3 = 1;
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
+showSlides1(slideIndex1);
+showSlides2(slideIndex2);
+showSlides3(slideIndex3);
 
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+function plusSlides(n, slide) {
+    if (slide === 1) {
+        showSlides1(slideIndex1 += n);
+    } else if (slide === 2) {
+        showSlides2(slideIndex2 += n);
+    } else if (slide === 3) {
+        showSlides3(slideIndex3 += n);
     }
-    slides[slideIndex-1].style.display = "block";  
 }
+
+function showSlides1(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides1");
+    if (n > slides.length) { slideIndex1 = 1 }
+    if (n < 1) { slideIndex1 = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex1 - 1].style.display = "block";
+}
+
+function showSlides2(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides2");
+    if (n > slides.length) { slideIndex2 = 1 }
+    if (n < 1) { slideIndex2 = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex2 - 1].style.display = "block";
+}
+
+function showSlides3(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides3");
+    if (n > slides.length) { slideIndex3 = 1 }
+    if (n < 1) { slideIndex3 = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex3 - 1].style.display = "block";
+}
+
+// Función para manejar el cambio automático de diapositivas
+function autoSlides(slideClass) {
+    const slides = document.querySelectorAll(`.${slideClass}`);
+    let currentIndex = 0;
+
+    slides[currentIndex].classList.add('active-slide'); // Muestra la primera imagen
+
+    setInterval(() => {
+        slides[currentIndex].classList.remove('active-slide'); // Oculta la imagen actual
+        currentIndex = (currentIndex + 1) % slides.length; // Calcula el índice siguiente
+        slides[currentIndex].classList.add('active-slide'); // Muestra la nueva imagen
+    }, 5000); // Cambia cada 5 segundos
+}
+
+
+// Obtener el botón
+var mybutton = document.getElementById("scrollToTopBtn");
+
+// Mostrar o esconder la flecha dependiendo del desplazamiento de la página
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        mybutton.style.display = "block"; // Mostrar el botón cuando el usuario se desplace hacia abajo
+    } else {
+        mybutton.style.display = "none"; // Ocultar el botón cuando esté en la parte superior
+    }
+};
+
+// Desplazar al principio de la página al hacer clic
+mybutton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Efecto suave de desplazamiento
+    });
+});
+
 
