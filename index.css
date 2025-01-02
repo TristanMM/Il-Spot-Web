@@ -643,12 +643,11 @@ header nav a:hover {
 
     header .menu-toggle {
         margin-left: auto;  /* Empuja el botón hacia la derecha */
-        margin-top: -93px;
     }
     
 
     header .logo img {
-        width: 130px;
+        display: none;
     }
 }
 
@@ -824,7 +823,7 @@ iframe {
 
     .section-title3::before,
     .section-title3::after {
-        width: 13%; /* Reduce la longitud de las líneas en pantallas pequeñas */
+        width: 7%; /* Reduce la longitud de las líneas en pantallas pequeñas */
     }
 
     .section-title4::before,
