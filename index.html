@@ -13,67 +13,75 @@
 
     <header>
         <div class="container">
-            <img src="media/ILSPOT_PNG_NEGRO.png" alt="logo del restaurante" width="200" height="90">
-            <nav>
+            <div class="logo">
+                <img src="media/ILSPOT_PNG_NEGRO.png" alt="Logo del restaurante" class="logo-img">
+            </div>
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav class="menu">
                 <a href="#Menu" class="scroll-link">Menu</a>
                 <a href="#HorarioDetalles" class="scroll-link">Horario y detalles</a>
-                <a href="#Ubicacion" class="scroll-link">Ubicacion y contacto</a>
+                <a href="#Imagenes" class="scroll-link">Fotos</a>
+                <a href="#Ubicacion" class="scroll-link">Contacto y ubicación</a>
             </nav>
         </div>
     </header>
+    
 
 
     <section id="hero">
-        <div class="slideshow-container1">
-            <div class="mySlides1 fade">
-                <img src="media/imagenes_ilustrativas/iL Spot - Portada Borr.png" style="width:100%">
-            </div>
-        </div>
+
+                <img src="media/imagenes_ilustrativas/iL Spot - Portada Borr.png" class="zoom-image" style="width:100%">
+
     </section>
+    
 
     <section id="Menu">
         <div class="container">
-            <h2>Menú</h2>
-            <p>Descubre nuestro menú a continuación:</p>
+             <div class="section-title4">
+                <h2>Menú</h2>
+             </div>
             <iframe src="media/MENU REST IL SPOT (3).pdf" width="100%" height="600px" style="border: none;"></iframe>
             <p>
-                Si prefieres, <a href="media/MENU REST IL SPOT (3).pdf" target="_blank">haz clic aquí para descargar el
-                    menú</a>.
+                Si prefieres, <a href="media/MENU REST IL SPOT (3).pdf" target="_blank" class="download-link">haz clic aquí para descargar el menú</a>.
             </p>
         </div>
     </section>
+    
+    
 
     <section id="HorarioDetalles">
         <div class="container">
 
-            <h2>Horario y detalles</h2>
+            <div class="section-title3">
+                <h2>Horario y detalles</h2>
+            </div>
             <div class="flex-container">
                 <!-- Horario -->
                 <div class="horario">
                     <h3>Horario</h3>
                     <ul>
                         <li><strong>Lunes:</strong> 11:00 - 23:00</li>
-                        <br>
+                        <br><br>
                         <li><strong>Martes:</strong> 11:00 - 23:00</li>
-                        <br>
+                        <br><br>
                         <li><strong>Miércoles:</strong> 11:00 - 23:00</li>
-                        <br>
+                        <br><br>
                         <li><strong>Jueves:</strong> 11:00 - 23:00</li>
-                        <br>
+                        <br><br>
                         <li><strong>Viernes:</strong> 11:00 - 23:00</li>
-                        <br>
+                        <br><br>
                         <li><strong>Sábado:</strong> 11:00 - 23:00</li>
-                        <br>
+                        <br><br>
                         <li><strong>Domingo:</strong> 11:00 - 23:00</li>
                     </ul>
-                    <br><br>
+                    <br>
                     <div id="status"></div>
                     <br>
                 </div>
                 <!-- Detalles -->
                 <div class="details-card">
-                    <h3>Detalles</h3>
-                    <p><strong>I'L Spot Pizzero, un restaurante especializado en pastas y cortes de carne de la
+                    <h3>I'L Spot Pizzero</h3>
+                    <p><strong>Es un restaurante especializado en pastas y cortes de carne de la
                         más alta calidad.</strong></p>
                     <p><strong>Tipos de Cocina:</strong></p>
                     <ul>
@@ -103,7 +111,9 @@
     <section id="Imagenes">
         <div class="container">
             <div class="column local">
-                <h2>Local</h2>
+                <div class="section-title">
+                <h2>Restaurante</h2>
+            </div>
                 <div class="slideshow-container2">
                     <div class="mySlides2 fade">
                         <img src="media/imagenes_ilustrativas/imagen5.jpeg" style="width:100%">
@@ -126,7 +136,9 @@
                 </div>
             </div>
             <div class="column comida">
-                <h2>Comida</h2>
+                <div class="section-title2">
+                    <h2>Platillos</h2>
+                 </div>
                 <div class="slideshow-container3">
                     <div class="mySlides3 fade">
                         <img src="media/imagenes_ilustrativas/imagen2.jpeg" style="width:100%">
@@ -178,37 +190,38 @@
     <section id="Ubicacion">
         <div class="container">
             <div class="column">
-                <h2>Ubicación</h2>
-                <div class="info">
-                    <p>
-                        <img src="media/ubicacion.png" alt="Ubicación del restaurante" width="25" height="20">
-                        <a href="https://maps.app.goo.gl/SAg9MJJysayRABvH8" target="_blank">
-                            I'L Spot Pizzero, Contiguo a la Yamaha, Barrio Veracruz, Puerto Limón, Costa Rica
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="column">
                 <h2>Contacto</h2>
                 <div class="info">
                     <p>
                         <img src="media/email.png" alt="Email del restaurante" width="25" height="20">
                         info@deymsa.com
-                    </p>
-                    <p>
+                        <br>
+                        <br><br>
                         <img src="media/telefono.png" alt="teléfono del restaurante" width="25" height="20">
                         +506 7152-8989
                     </p>
                 </div>
             </div>
+            <div class="column">
+                <h2>Ubicación</h2>
+                <div class="info">
+                    <p>
+                        <img src="media/ubicacion.png" alt="Ubicación del restaurante" width="25" height="20">
+                            I'L Spot Pizzero, Contiguo a la Yamaha, Barrio Veracruz, Puerto Limón, Costa Rica
+                    </p>
+                </div>
+                <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.1300739055905!2d-83.04207402520635!3d10.006112990099608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa7050042c63ffb%3A0xe075bb7304ee7913!2sI&#39;L%20Spot%20Pizzero!5e0!3m2!1ses-419!2scr!4v1735794827799!5m2!1ses-419!2scr" width="420" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
         </div>
     </section>
     
     
     <!-- Flecha de retorno al inicio -->
-<a href="#" class="scroll-to-top" id="scrollToTopBtn">
-    &#8593; <!-- Esto es una flecha hacia arriba (puedes usar un icono o imagen si prefieres) -->
-</a>
+    <a href="#" class="scroll-to-top" id="scrollToTopBtn">
+        &#8593; <!-- Esto es una flecha hacia arriba (puedes usar un icono o imagen si prefieres) -->
+    </a>
 
 
 </body>

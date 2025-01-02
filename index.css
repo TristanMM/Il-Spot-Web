@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
     margin: 0;
 }
 
@@ -93,6 +93,8 @@ header .logo {
     height: 100vh;
     overflow: hidden;
 }
+
+
 
 #Imagenes_lugar {
     display: flex;
@@ -268,6 +270,7 @@ header .logo {
     border: none;
 }
 
+
 /* Ajustes para móviles */
 @media (max-width: 768px) {
     header .container {
@@ -278,6 +281,14 @@ header .logo {
     header nav {
         flex-direction: column;
         gap: 10px;
+    }
+
+    header .logo img {
+        width: 120px;
+    }
+
+    header a {
+        font-size: 1em;
     }
 
     #Ubicacion .column {
@@ -302,4 +313,539 @@ header .logo {
         right: 10px;
         bottom: 10px;
     }
+}
+
+/* Ajustes para dispositivos pequeños (celulares) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo img {
+        width: 100px;
+    }
+
+    header a {
+        font-size: 0.9em;
+    }
+
+    header nav {
+        gap: 5px;
+    }
+}
+
+/* animacion del fondo del inicio */
+/* Contenedor principal del slideshow */
+.slideshow-container1 {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación de zoom lento */
+.zoom-image {
+    animation: slow-zoom 10s infinite; /* Animación de 10 segundos, repitiéndose infinitamente */
+    transform-origin: center; /* Centro como punto de zoom */
+}
+
+/* Definición de la animación */
+@keyframes slow-zoom {
+    0% {
+        transform: scale(1); /* Tamaño inicial */
+    }
+    50% {
+        transform: scale(1.1); /* Tamaño aumentado al 110% */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
+
+/* estilizacion del texto del menu */
+/* Estilo inicial del enlace */
+.download-link {
+    color:goldenrod; /* Color inicial dorado */
+    text-decoration: none;
+}
+
+/* Cambiar el color al hacer clic */
+.download-link:active {
+    color: white; /* Color blanco mientras se hace clic */
+}
+
+/* imagen del fondo de horario y detalles */
+#HorarioDetalles {
+    background-image: url('media/imagenes_ilustrativas/imagen26.jpeg'); /* Cambia por la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 50px 20px; /* Agrega un padding para espaciar el contenido */
+    /* color: #fff; Cambia el color del texto para que sea visible sobre el fondo */
+}
+
+/* Opcional: Asegúrate de que el texto sea legible */
+#HorarioDetalles h2, #HorarioDetalles h3, #HorarioDetalles p, #HorarioDetalles ul {
+    /* background-color: rgba(0, 0, 0, 0.6); Fondo semitransparente para el texto */
+    padding: 10px; /* Espaciado interno para el texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.horario,.details-card{
+       background-color: rgba(255, 255, 255, 0.7); Fondo semitransparente para el texto
+ 
+}
+
+#HorarioDetalles h2{
+color: goldenrod;
+}
+
+/* estilizacion de horario y detalles
+/* Centrar los días del horario */
+.horario {
+    font-weight: bold;
+    list-style: none; /* Elimina las viñetas predeterminadas */
+    text-align: center; /* Centra el texto */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.horario ul li {
+    margin-bottom: 10px; /* Espaciado entre los días */
+}
+
+/* Centrar el contenido de los detalles */
+.details-card {
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+}
+
+.details-card li{
+    text-align: left;
+}
+
+/* Agregar viñetas a "Tipos de Cocina" y "Ventajas" */
+.details-card ul {
+    list-style: disc; /* Usa viñetas */
+    margin: 0 auto; /* Centra las listas horizontalmente */
+    padding-left: 0; /* Ajusta el relleno para alinear las viñetas */
+    display: inline-block; /* Asegura que la lista esté centrada */
+}
+
+/* estilizadp de fotos del local y comida */
+/* Estilo para el contenedor principal */
+#Imagenes .container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre las dos columnas */
+    gap: 20px; /* Espacio entre las columnas */
+    margin: 20px;
+}
+
+/* Estilo para las columnas */
+#Imagenes .column {
+    flex: 1; /* Cada columna ocupará el mismo espacio disponible */
+}
+
+/* Estilo para las columnas específicas */
+#Imagenes .column.local {
+    order: 1; /* Las imágenes del local estarán en el lado izquierdo */
+}
+
+#Imagenes .column.comida {
+    order: 2; /* Las imágenes de comida estarán en el lado derecho */
+}
+
+/* Estilo para el slideshow (si es necesario, puedes ajustarlo) */
+.slideshow-container2, .slideshow-container3 {
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo para las imágenes dentro del slideshow */
+.mySlides2 img, .mySlides3 img {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: 555px; /* Establece una altura fija para las imágenes */
+    object-fit:fill; /* Ajusta las imágenes para que cubran completamente el contenedor */
+    border-radius: 10px; /* Opcional: agrega bordes redondeados */
+
+}
+
+/* Animación de desvanecimiento */
+.mySlides2.fade, .mySlides3.fade {
+    animation: fade 6s infinite;
+}
+
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia las columnas a un formato vertical en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .column {
+        width: 100%; /* Las columnas ocupan el 100% del ancho en pantallas pequeñas */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow-container2 img,
+    .slideshow-container3 img {
+        border-radius: 5px; /* Reduce el radio de los bordes en pantallas pequeñas */
+    }
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#Imagenes h2{
+    text-align: center;
+}
+
+#HorarioDetalles h2{
+    text-align: center;
+}
+
+    /* Estilo para el enlace */
+    .ubicacion-link {
+        color: white; /* Color blanco por defecto */
+        text-decoration: none; /* Sin subrayado */
+        transition: color 0.3s ease; /* Suaviza el cambio de color */
+    }
+
+    /* Cambiar el color al pasar el cursor */
+    .ubicacion-link:hover {
+        color: gold; /* Cambia a dorado */
+    }
+
+
+
+
+    /* Contenedor principal */
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 20px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo del header */
+header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0);
+    padding: 10px 20px;
+    box-sizing: border-box;
+
+}
+
+/* Logo */
+header .logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Menú */
+header nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+header nav a {
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: goldenrod;
+}
+
+/* Botón de menú para móviles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: white;
+    cursor: pointer;
+}
+
+.zoom-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Abarca todo el alto */
+    object-fit:fill; /* La imagen se ajusta sin deformarse */
+}
+
+/* Responsive */
+
+/* Tablets y móviles */
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 10px;
+        display: none; /* Ocultamos el menú inicialmente */
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+        
+    }
+
+    header nav a {
+        font-size: 1em;
+        padding: 10px 20px;
+        text-align: center;
+        display: block;
+        
+    }
+
+    .menu-toggle {
+        display: block;
+        
+    }
+
+    header.nav-open nav {
+        display: flex;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: flex-start;  /* Alinea el contenido hacia la izquierda */
+        align-items:start;  /* Alinea verticalmente los elementos al centro */
+    }
+
+    header .menu-toggle {
+        margin-left: auto;  /* Empuja el botón hacia la derecha */
+        margin-top: -93px;
+    }
+    
+
+    header .logo img {
+        width: 130px;
+    }
+}
+
+
+/* Estilo del título */
+.section-title {
+    /* font-family: 'Georgia', serif; Cambia según el estilo que desees */
+    /* font-size: 2em; */
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    color: black; /* Color del texto */
+}
+
+/* Líneas decorativas */
+.section-title::before,
+.section-title::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Alinea verticalmente con el texto */
+    width: 32%; /* Longitud de las líneas */
+    height: 1px; /* Grosor de las líneas */
+    background-color:goldenrod; /* Color de las líneas */
+}
+
+.section-title::before {
+    left: 0; /* Línea izquierda */
+}
+
+.section-title::after {
+    right: 0; /* Línea derecha */
+}
+
+.section-title{
+    color: goldenrod;
+}
+
+/* Estilo del título */
+.section-title2 {
+    /* font-family: 'Georgia', serif; Cambia según el estilo que desees */
+    /* font-size: 2em; */
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    color: black; /* Color del texto */
+}
+
+/* Líneas decorativas */
+.section-title2::before,
+.section-title2::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Alinea verticalmente con el texto */
+    width: 37%; /* Longitud de las líneas */
+    height: 1px; /* Grosor de las líneas */
+    background-color:goldenrod; /* Color de las líneas */
+}
+
+.section-title2::before {
+    left: 0; /* Línea izquierda */
+}
+
+.section-title2::after {
+    right: 0; /* Línea derecha */
+}
+
+.section-title2{
+    color: goldenrod;
+}
+
+
+
+/* Estilo del título */
+.section-title3 {
+    /* font-family: 'Georgia', serif; Cambia según el estilo que desees */
+    /* font-size: 2em; */
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    color: black; /* Color del texto */
+}
+
+/* Líneas decorativas */
+.section-title3::before,
+.section-title3::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Alinea verticalmente con el texto */
+    width: 38%; /* Longitud de las líneas */
+    height: 1px; /* Grosor de las líneas */
+    background-color:goldenrod; /* Color de las líneas */
+}
+
+.section-title3::before {
+    left: 0; /* Línea izquierda */
+}
+
+.section-title3::after {
+    right: 0; /* Línea derecha */
+}
+
+.section-title3{
+    color: goldenrod;
+}
+
+
+
+/* Estilo del título */
+.section-title4 {
+    /* font-family: 'Georgia', serif; Cambia según el estilo que desees */
+    /* font-size: 2em; */
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    color: black; /* Color del texto */
+}
+
+/* Líneas decorativas */
+.section-title4::before,
+.section-title4::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Alinea verticalmente con el texto */
+    width: 44%; /* Longitud de las líneas */
+    height: 1px; /* Grosor de las líneas */
+    background-color:goldenrod; /* Color de las líneas */
+}
+
+.section-title4::before {
+    left: 0; /* Línea izquierda */
+}
+
+.section-title4::after {
+    right: 0; /* Línea derecha */
+}
+
+.section-title4{
+    color: goldenrod;
+}
+
+
+
+
+.map-container {
+    text-align:start;
+    margin: 20px 0;
+}
+
+iframe {
+    max-width: 100%; /* Para que sea responsivo */
+}
+
+.slideshow-container2 {
+    max-width: 100%; /* Para que sea responsivo */
+}
+
+.slideshow-container3 {
+    max-width: 100%; /* Para que sea responsivo */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+
+    .section-title::before,
+    .section-title::after {
+        width: 0%; /* Reduce la longitud de las líneas en pantallas pequeñas */
+    }
+
+    .section-title2::before,
+    .section-title2::after {
+        width: 0%; /* Reduce la longitud de las líneas en pantallas pequeñas */
+    }
+
+    .section-title3::before,
+    .section-title3::after {
+        width: 13%; /* Reduce la longitud de las líneas en pantallas pequeñas */
+    }
+
+    .section-title4::before,
+    .section-title4::after {
+        width: 33%; /* Reduce la longitud de las líneas en pantallas pequeñas */
+    }
+}
+
+header .menu-toggle {
+    margin-left: auto;
+    transition: background-color 0.3s ease; /* Agrega una transición suave para el color */
+}
+
+header .menu-toggle:hover {
+    background-color: goldenrod;  /* Cambia el color de fondo a dorado */
+}
+
+
+
+
+
+#Menu .container {
+    padding-top: -15;  /* Asegúrate de que no haya relleno en la parte superior del contenedor */
 }
